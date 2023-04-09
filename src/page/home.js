@@ -1,8 +1,7 @@
 import React from 'react'
-
-import { Row,Col ,Botton} from 'react-bootstrap';
+import { Row,Col ,Button} from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-
+import './home.css'
 const Home = () => {
   return (
     <Row>
@@ -10,12 +9,14 @@ const Home = () => {
         <div>
           <h1>share the world with the friend</h1>
           <p>chat app that lets you connect to the world</p>
-          <LinkContainer>
-          <Botton>
-            Get started
-          </Botton>
+          <LinkContainer to={"/chat"}>
+          <Button variant="success">
+            Get started <i className='fas fa-comment home-message-icon'></i>
+          </Button>
           </LinkContainer>
         </div>
+      </Col>
+      <Col md={6} className="home__bg">
       </Col>
     </Row>
   )
